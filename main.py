@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout="wide")
 
@@ -21,4 +22,20 @@ with col2:
     st.write("GitHub: https://github.com/Fkmatheus")
     st.write("Linkedin: https://www.linkedin.com/in/matheus-santos-aa31a823a/")
 
-   
+
+col3, col4 = st.columns(2)
+
+df = pandas.read_csv("data.csv", sep=";")
+with col3:
+    for index, row in df[:10].iterrows():
+        st.header(row["title"])
+        st.image(f"images/{row["image"]}")
+        st.write(row["description"])
+        st.write(row["url"])
+
+with col4:
+    for index, row in df[10:].iterrows():
+        st.header(row["title"])
+        st.image(f"images/{row["image"]}")
+        st.write(row["description"])
+        st.write(row["url"])
