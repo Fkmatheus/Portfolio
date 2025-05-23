@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas
 
+
 st.set_page_config(layout="wide")
 
-col1, empty, col2 = st.columns([1, 0.2, 2])
+
+col1, empty, col2 = st.columns([1.5, 0.2, 2])
 
 with col1:
-    st.image("images/photo.jpg", width=400)
+    st.image("images/photo.png", width=400)
 
 with col2:
     st.title("Matheus Santos")
