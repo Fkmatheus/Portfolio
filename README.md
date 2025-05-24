@@ -14,4 +14,6 @@ Streamlit
 Pandas  
 smtplib (módulo padrão do Python)  
 
+![Preview do site Home](print_home.png)
+![Preview do site Contact](print_contact.png)
   
